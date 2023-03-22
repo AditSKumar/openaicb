@@ -1,5 +1,11 @@
 var audio = new Audio('assets/sentmessage.mp3');
 require ('dotenv').config();
+const express = require("express");
+const app = express();
+
+app.listen(3000, () => {
+  console.log("Application started and Listening on port 3000");
+});
 
 var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5411.448529658408!2d-88.228491!3d40.111323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd0eb0df454b5%3A0xe7ba4e7c081a6483!2z6IGU5ZCI56S85aCC!5e1!3m2!1sen-US!2sus!4v1676164166623!5m2!1szh-CN!2sus' class='map'></iframe></div><label class='add'><address><br>Urbana, Illinois, United States 61801</address>";
 const openai = require("openai");
